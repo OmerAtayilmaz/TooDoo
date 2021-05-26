@@ -29,13 +29,13 @@
     
     <ul class="navbar-nav" id="TooDooNav">
         <ul class="nav-item active">
-            <a class="nav-link">TooDoo</a>
+            <a class="nav-link" href="#toodoo">TooDoo</a>
         </ul>
         <ul class="nav-item">
-            <a class="nav-link">CountDownTimer</a>
+            <a class="nav-link" href="#countdowntimer">CountDownTimer</a>
         </ul>
         <ul class="nav-item">
-            <a class="nav-link">Wheather</a>
+            <a class="nav-link" href="#wheather">Wheather</a>
         </ul>
     </ul>
 </nav>
@@ -75,16 +75,16 @@
 <!--Add TooDoo-->
 <header>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2 pt-3 bg-gray text-white text-right">
+    <div class="row bg-gray">
+        <div class="col-md-2 pt-3 y text-white text-right">
             <label>Görev Ekle:</label>
         </div>
-        <div class="col-md-5 pt-3  pb-2  bg-gray">
+        <div class="col-md-5 pt-3  pb-2  ">
             <div class="form-group">
                 <input type="text" class="form-control">
             </div>
         </div>
-        <div class="col-md-5 pt-3 pb-2 bg-gray text-center ">
+        <div class="col-md-5 pt-3 pb-2 text-center ">
             <button type="button" class="btn btn-outline-primary custom-button" data-target="#addToDoo" data-toggle="modal">Add Task</button>
             <button type="button" class="btn btn-outline-danger  custom-button" >Remove Task</button>
             <button type="button" class="btn btn-outline-primary custom-button">Check it done</button>
@@ -95,6 +95,7 @@
 </header>
 <!--Show TooDoo-->
 <main>
+<section id="toodoo">
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 bg-gray ">
@@ -202,10 +203,65 @@
         </div>
     </div>
 </div>
+</section>
+<hr class="bg-white">
+<section id="countdowntimer">
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-4 mt-5">
+            <h4 class="text-center text-white "><i class="fas fa-calculator mr-2"></i>Calculator</h4>
+            <div class="form-group">
+                <label for ="textbox1" class="form-control">Type Number</label>
+                <input type="text" id="#textbox1" class="form-control">
+            </div>
+            <div class="btn-group text-center">
+                <button class="btn btn-outline-info custom-button  mr-2">Extraction</button>
+                <button class="btn btn-outline-info custom-button  mr-2">Absolute</button>
+                <button class="btn btn-outline-info custom-button  mr-2">Factorial</button>
+                <button class="btn btn-outline-info custom-button  mr-2">Square</button>
+            </div>
+           
+
+        </div>
+        <div class="col-md-4 mt-5">
+            <h4 class="text-center text-white"><i class="fas fa-lg fa-stopwatch mr-2"></i>Counter</h4>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width:40%"></div>
+            </div>
+            <ul class="list-group list-group-horizontal justify-content-center mt-2 ">
+                <li class="list-group-item"><i class="fas fa-plus pt-2"></i></li>
+                <li class="list-group-item"><input type="text" class="form-control text-center" placeholder="Enter number">  </li>
+                <li class="list-group-item"><i class="fas fa-minus pt-2"></i></li>
+            </ul>
+            <button class="btn btn-outline-info custom-button mb-n3 w-75">Start  </button>
+
+        </div>
+        <div class="col-md-4 mt-5">
+            <h4 class="text-center text-white"><i class="fas fa-chart-bar mr-2"></i>Statistics</h4>
+            <ul class="list-group">
+                <li class="border-0 mt-1 list-group-item">Waiting:5</li>
+                <li class="border-0 mt-1 list-group-item">5 Star Finished:5</li>
+                <li class="border-0 mt-1 list-group-item">4 Star Finished:15</li>
+                <li class="border-0 mt-1 list-group-item">3 Star Finished:25</li>
+                <li class="border-0 mt-1 list-group-item">Total Task:52</li>
+
+            </ul>
+        </div>
+       
+    </div>
+</div>
+</section>
+<section id="wheather">
+    <div class="container-fluid">
+        <div class="row text-center text-white">
+            <div class="col-12">Wheather API</div>
+        </div>
+    </div>
+</section>
 </main>
 <!--Some Stats-->
 <footer>
-    
+
 </footer>
 </body>
 </html>
