@@ -14,6 +14,9 @@ const taskInput=document.querySelector("#taskInput");
 const taskStar=document.querySelector("#taskStar");
 const taskDesc=document.querySelector("#taskDesc");
 
+
+//containers
+const Container5star = document.querySelector("#Container5star");
 //functions
 //textleri imla kurallarına göre düzenledik
 const textConverter=(text)=>{
@@ -44,8 +47,32 @@ const descConverter=(text)=>{
 }
 
 //card ekleme fonksiyonu
+const addCard=(message,star)=>{
+    
+    html=` <div class="alert alert-custom">
+    <label class="float-left mr-2">
+        <small>${star}<i class="fas fa-star custom-star"></i></small>
+    </label>
+    ${message}
+    <button class="float-right btn btn-outline-danger custom-btn2">
+        <i class="far fa-xs fa-trash-alt"></i>
+    </button>
+    <button class="float-right btn btn-outline-primary custom-btn2">
+        <i class="far fa-xs fa-edit"></i>
+    </button>
+    <button class="float-right btn btn-outline-success custom-btn2">
+        <i class="far fa-xs fa-check-square"></i>
+    </button>
+</div>
+    `;
 
-
+    Container5star.insertAdjacentHTML('afterbegin',html);
+}
+const displayCards=(arrayList)=>{
+    for(card of arrayList){
+        addCard(card[1],card[2]);
+    }
+}
 
 
 //remove task
@@ -62,6 +89,7 @@ saveTaskBtn.addEventListener('click',()=>{
   oneTask.push(starConverter(taskStar.value));
   oneTask.push(descConverter(taskDesc.value));
   database.push(oneTask);
+  displayCards(database);
   //temizleme
   oneTask=[];
   taskInput.value=taskStar.value=taskDesc.value='';

@@ -22,11 +22,12 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#TooDooNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="TooDooNav">
-        <ul class="navbar-nav ml-auto" >
+    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#TooDooNav"
+    aria-controls="TooDooNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse justify-content-center" id="TooDooNav">
+        <ul class="navbar-nav" >
             <ul class="nav-item active">
                 <a class="nav-link" href="#toodoo">TooDoo</a>
             </ul>
@@ -103,67 +104,38 @@
         <div class="col-md-4 bg-gray ">
             <h4 class="text-center text-white">5 Star Tasks</h4>
             <hr class="bg-white">
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>5<i class="fas fa-star custom-star"></i></small>
-                </label>
-                First TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
-            </div>
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>5<i class="fas fa-star custom-star"></i></small>
-                </label>
-                Second TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
-            </div>
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>5<i class="fas fa-star custom-star"></i></small>
-                </label>
-                Second TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
-            </div>
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>5<i class="fas fa-star custom-star"></i></small>
-                </label>
-                Thirdth TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
-            </div>
-            
+            <div id="Container5star">
+                <div class="alert alert-custom">
+                    <label class="float-left mr-2">
+                        <small>5<i class="fas fa-star custom-star"></i></small>
+                    </label>
+                    First TooDoo
+                    <button class="float-right btn btn-outline-danger custom-btn2">
+                        <i class="far fa-xs fa-trash-alt"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-primary custom-btn2">
+                        <i class="far fa-xs fa-edit"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-success custom-btn2">
+                        <i class="far fa-xs fa-check-square"></i>
+                    </button>
+                </div>
+                <div class="alert alert-custom">
+                    <label class="float-left mr-2">
+                        <small>5<i class="fas fa-star custom-star"></i></small>
+                    </label>
+                    Second TooDoo
+                    <button class="float-right btn btn-outline-danger custom-btn2">
+                        <i class="far fa-xs fa-trash-alt"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-primary custom-btn2">
+                        <i class="far fa-xs fa-edit"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-success custom-btn2">
+                        <i class="far fa-xs fa-check-square"></i>
+                    </button>
+                </div>
+            </div>   
         </div>
         <div class="col-md-4 bg-gray">
             <h4 class="text-center text-white">4 Star Tasks</h4>
