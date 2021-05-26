@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="TooDoo Uygulaması ve Çok Daha Fazlası!">
     <meta name="author" content="Ömer Atayilmaz">
-    <!--İmportant-->
-    <meta http-equiv="refresh" content="30">
+    <!--İmportant  <meta http-equiv="refresh" content="30">-->
+    
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--Bootstrap 4 & FontAwesome-->
@@ -51,7 +51,7 @@
             <div class="model-body mt-2 text-center">
                 <div class="form-group">
                     <label for="sel1">Önem Dercesi</label>
-                    <select class="form-control bg-dark text-white" id="sel1">
+                    <select id="taskStar" class="form-control bg-dark text-white" id="sel1">
                       <option>5⭐⭐⭐⭐⭐</option>
                       <option>4⭐⭐⭐⭐</option>
                       <option>3⭐⭐⭐</option>
@@ -67,7 +67,7 @@
             </div>
            
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success custom-button">Save Task</button>
+                <button type="button" id="saveTaskBtn" class="btn btn-outline-success custom-button">Save Task</button>
                 <button type="button" data-dismiss="modal"  class=" btn btn-outline-danger custom-button">Exit</button>
             </div>
         </div>
@@ -77,20 +77,19 @@
 <header>
 <div class="container-fluid">
     <div class="row bg-gray">
-        <div class="col-md-2 pt-3 y text-white text-right">
-            <label>Görev Ekle:</label>
+        <div class="col-md-2 pt-3 y text-white text-center">
+            <label class="pt-1">Görev Ekle</label>
         </div>
         <div class="col-md-5 pt-3  pb-2  ">
             <div class="form-group">
-                <input type="text" class="form-control">
+                <input type="text" id="taskInput" class="form-control">
             </div>
         </div>
         <div class="col-md-5 pt-3 pb-2 text-center ">
             <div class="btn-group">
-                <button type="button" class="btn btn-outline-primary custom-button" data-target="#addToDoo" data-toggle="modal">Add Task</button>
-                <button type="button" class="btn btn-outline-danger  custom-button" >Remove Task</button>
-                <button type="button" class="btn btn-outline-primary custom-button">Check it done</button>
-                <button type="button" class="btn btn-outline-info    custom-button">List All Task</button>
+                <button type="button" id="btnTaskAdd" class="btn btn-outline-primary custom-button" data-target="#addToDoo" data-toggle="modal">Add Task</button>
+                <button type="button" id="listAllTasks" class="btn btn-outline-danger  custom-button" >Remove Task</button>
+                <button type="button" id="listAllTasks" class="btn btn-outline-info    custom-button">List All Task</button>
             </div>
            
         </div>
@@ -263,9 +262,16 @@
     </div>
 </section>
 </main>
-<!--Some Stats-->
+<!--Footer Section-->
 <footer>
 
 </footer>
+<script src="main.js"></script>
+
+<script>
+    $(function(){
+        console.log("running");
+    });
+</script>
 </body>
 </html>
