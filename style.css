@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+:root{
+    --site-font:'Squada One', cursive;
+    --bg-color:#030303;
+    --bg-primary:linear-gradient(to right,#030303,#1b1b1b,#030303) !important;
+    --bg-gray:#111;
+
+}
+
+/*ScrollBar*/
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+/*Body*/
+body{
+    font-family: var(--site-font) !important;
+    font-size:1.4rem;
+}
+/*Colors*/
+.bg-dark{
+    background: var(--bg-color)!important;
+}
+.bg-gray{
+    background: var(--bg-gray)!important;
+}
+
+.bg-primary{
+    background:var(--bg-primary) ;
+}
+
+
+/*Navbar*/
+.navbar-nav{
+    letter-spacing: 1px !important;
+}
+
+/*Buttons*/
+.custom-button{
+    color:#fff !important;
+    border:1px dashed  #fff;
+   
+    
+}
+.custom-button:hover{
+    margin-top:-4px !important;
+    text-shadow:2px 2px gray;
+    box-shadow:6px 6px 2px #fff !important;
+    transition:0.5s;
+}
+.custom-btn2{
+    color:#fff !important;
+    border-color:#fff;  
+    margin-left: 5px !important;
+    margin-top:-3px;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    
+}
+.custom-btn2:hover{
+    margin-top:-4px !important;
+    text-shadow:1px 1px gray;
+    box-shadow:3px 3px 30px #fff !important;
+    transition:0.5s;
+}
+
+
+
+/*Modals*/
+.modal{
+    background: #fff;
+}
+.modal-content{
+    background: var(--bg-color);
+    color: #fff !important;
+}
+
+.custom-textarea{
+    width: max-content;
+    height: 50px;
+    text-align: center !important;
+}
+
+/*Alert*/
+.alert-custom{
+    color:#fff;
+    border:1px solid #fff;
+    background-image:var(--bg-primary) !important;
+    
+}
+.custom-star{
+    color:yellow !important;
+}

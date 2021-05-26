@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TooDoo</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="TooDoo Uygulaması ve Çok Daha Fazlası!">
+    <meta name="author" content="Ömer Atayilmaz">
+    <!--İmportant-->
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--Bootstrap 4 & FontAwesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <!--Style-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center sticky-top">
+    
+    <button type="button" class="navbar-toggler" data-target="#TooDooNav" data-toggle="collapse">
+        <span class="fas fa-bars"></span>
+    </button>
+    
+    <ul class="navbar-nav" id="TooDooNav">
+        <ul class="nav-item active">
+            <a class="nav-link">TooDoo</a>
+        </ul>
+        <ul class="nav-item">
+            <a class="nav-link">CountDownTimer</a>
+        </ul>
+        <ul class="nav-item">
+            <a class="nav-link">Wheather</a>
+        </ul>
+    </ul>
+</nav>
+<!--Modals-->
+<div class="modal fade" id="addToDoo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <label>Add Task</label>
+                <button type="button" class="btn btn-outline-danger custom-button fas fa-xs fa-times-circle text-white" data-dismiss="modal"></button>
+            </div>
+            <div class="model-body mt-2 text-center">
+                <div class="form-group">
+                    <label for="sel1">Önem Dercesi</label>
+                    <select class="form-control bg-dark text-white" id="sel1">
+                      <option>5⭐⭐⭐⭐⭐</option>
+                      <option>4⭐⭐⭐⭐</option>
+                      <option>3⭐⭐⭐</option>
+                      <option>2⭐⭐</option>
+                      <option>1⭐</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description<small class="font-weight-light"> ( Optional )</small></label>
+                    <input type='text' class="form-control" />
+                </div>
+
+            </div>
+           
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success custom-button">Save Task</button>
+                <button type="button" data-dismiss="modal"  class=" btn btn-outline-danger custom-button">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Add TooDoo-->
+<header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 pt-3 bg-gray text-white text-right">
+            <label>Görev Ekle:</label>
+        </div>
+        <div class="col-md-5 pt-3  pb-2  bg-gray">
+            <div class="form-group">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-5 pt-3 pb-2 bg-gray text-center ">
+            <button type="button" class="btn btn-outline-primary custom-button" data-target="#addToDoo" data-toggle="modal">Add Task</button>
+            <button type="button" class="btn btn-outline-danger  custom-button" >Remove Task</button>
+            <button type="button" class="btn btn-outline-primary custom-button">Check it done</button>
+            <button type="button" class="btn btn-outline-info    custom-button">List All Task</button>
+        </div>
+    </div>    
+</div>
+</header>
+<!--Show TooDoo-->
+<main>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 bg-gray ">
+            <h4 class="text-center text-white">5 Star Tasks</h4>
+            <hr class="bg-white">
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>5<i class="fas fa-star custom-star"></i></small>
+                </label>
+                First TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>5<i class="fas fa-star custom-star"></i></small>
+                </label>
+                Second TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>5<i class="fas fa-star custom-star"></i></small>
+                </label>
+                Second TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>5<i class="fas fa-star custom-star"></i></small>
+                </label>
+                Thirdth TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+            
+        </div>
+        <div class="col-md-4 bg-gray">
+            <h4 class="text-center text-white">4 Star Tasks</h4>
+            <hr class="bg-white">
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>4<i class="fas fa-star custom-star"></i></small>
+                </label>
+                First TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 bg-gray">
+            <h4 class="text-center text-white">3 and Less Star Tasks</h4>
+            <hr class="bg-white">
+            <div class="alert alert-custom">
+                <label class="float-left mr-2">
+                    <small>3<i class="fas fa-star custom-star"></i></small>
+                </label>
+                First TooDoo
+                <button class="float-right btn btn-outline-danger custom-btn2">
+                    <i class="far fa-xs fa-trash-alt"></i>
+                </button>
+                <button class="float-right btn btn-outline-primary custom-btn2">
+                    <i class="far fa-xs fa-edit"></i>
+                </button>
+                <button class="float-right btn btn-outline-success custom-btn2">
+                    <i class="far fa-xs fa-check-square"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<!--Some Stats-->
+<footer>
+    
+</footer>
+</body>
+</html>
