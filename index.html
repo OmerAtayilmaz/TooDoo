@@ -10,12 +10,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--Bootstrap 4 & FontAwesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
+     -->
+     <link rel="stylesheet" href="./bootstrap/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+     <script src="./bootstrap/jquery-3.6.0.min.js"></script>
+     <script src="./bootstrap/bootstrap.min.js"></script>
     <!--Style-->
     <link rel="stylesheet" href="style.css">
 
@@ -33,9 +37,6 @@
             </ul>
             <ul class="nav-item">
                 <a class="nav-link" href="#countdowntimer">CountDownTimer</a>
-            </ul>
-            <ul class="nav-item">
-                <a class="nav-link" href="#wheather">Wheather</a>
             </ul>
         </ul>
     </div>
@@ -140,39 +141,43 @@
         <div class="col-md-4 bg-gray">
             <h4 class="text-center text-white">4 Star Tasks</h4>
             <hr class="bg-white">
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>4<i class="fas fa-star custom-star"></i></small>
-                </label>
-                First TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
+            <div id="Container4star">
+                <div class="alert alert-custom">
+                    <label class="float-left mr-2">
+                        <small>4<i class="fas fa-star custom-star"></i></small>
+                    </label>
+                    First TooDoo
+                    <button class="float-right btn btn-outline-danger custom-btn2">
+                        <i class="far fa-xs fa-trash-alt"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-primary custom-btn2">
+                        <i class="far fa-xs fa-edit"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-success custom-btn2">
+                        <i class="far fa-xs fa-check-square"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="col-md-4 bg-gray">
             <h4 class="text-center text-white">3 and Less Star Tasks</h4>
             <hr class="bg-white">
-            <div class="alert alert-custom">
-                <label class="float-left mr-2">
-                    <small>3<i class="fas fa-star custom-star"></i></small>
-                </label>
-                First TooDoo
-                <button class="float-right btn btn-outline-danger custom-btn2">
-                    <i class="far fa-xs fa-trash-alt"></i>
-                </button>
-                <button class="float-right btn btn-outline-primary custom-btn2">
-                    <i class="far fa-xs fa-edit"></i>
-                </button>
-                <button class="float-right btn btn-outline-success custom-btn2">
-                    <i class="far fa-xs fa-check-square"></i>
-                </button>
+            <div id="Container3star">
+                <div class="alert alert-custom">
+                    <label class="float-left mr-2">
+                        <small>3<i class="fas fa-star custom-star"></i></small>
+                    </label>
+                    First TooDoo
+                    <button class="float-right btn btn-outline-danger custom-btn2">
+                        <i class="far fa-xs fa-trash-alt"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-primary custom-btn2">
+                        <i class="far fa-xs fa-edit"></i>
+                    </button>
+                    <button class="float-right btn btn-outline-success custom-btn2">
+                        <i class="far fa-xs fa-check-square"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -182,66 +187,49 @@
 <section id="countdowntimer">
 <div class="container">
     <div class="row text-center">
-        <div class="col-md-4 mt-5">
+        <div class="col-md-6 mt-5">
             <h4 class="text-center text-white "><i class="fas fa-calculator mr-2"></i>Calculator</h4>
             <div class="form-group">
-                <label for ="textbox1" class="form-control">Type Number</label>
-                <input type="text" id="#textbox1" class="form-control">
+                <label for ="mathValue" class="form-control" id="mathResult">Type Number</label>
+                <input type="text" id="mathValue" class="form-control">
             </div>
             <div class="btn-group text-center">
-                <button class="btn btn-outline-info custom-button  mr-2">Extraction</button>
-                <button class="btn btn-outline-info custom-button  mr-2">Absolute</button>
-                <button class="btn btn-outline-info custom-button  mr-2">Factorial</button>
-                <button class="btn btn-outline-info custom-button  mr-2">Square</button>
+                <button id="absoluteBtn" class="btn btn-outline-info custom-button  mr-2">Absolute</button>
+                <button id="factorialBtn" class="btn btn-outline-info custom-button  mr-2">Factorial</button>
+                <button id="squareBtn" class="btn btn-outline-info custom-button  mr-2">Square</button>
             </div>
            
 
         </div>
-        <div class="col-md-4 mt-5">
+        <div class="col-md-6 mt-5">
             <h4 class="text-center text-white"><i class="fas fa-lg fa-stopwatch mr-2"></i>Counter</h4>
             <div class="progress">
-                <div class="progress-bar bg-warning" style="width:40%"></div>
+                <div class="progress-bar bg-warning" id="timerProgress"></div>
             </div>
             <ul class="list-group list-group-horizontal justify-content-center mt-2 ">
-                <li class="list-group-item"><i class="fas fa-plus pt-2"></i></li>
-                <li class="list-group-item"><input type="text" class="form-control text-center" placeholder="Enter number">  </li>
-                <li class="list-group-item"><i class="fas fa-minus pt-2"></i></li>
+                <li id="sayacArttir" class="list-group-item"><i class="fas fa-plus pt-2"></i></li>
+                <li class="list-group-item"><input  id="sayacDeger" type="text" class="form-control text-center" placeholder="Enter number">  </li>
+                <li id="sayacAzalt" class="list-group-item"><i class="fas fa-minus pt-2"></i></li>
             </ul>
-            <button class="btn btn-outline-info custom-button mb-n3 w-75">Start  </button>
+            <button id="sayacBtn" class="btn btn-outline-info custom-button mb-n3 w-75">Start  </button>
 
         </div>
-        <div class="col-md-4 mt-5">
-            <h4 class="text-center text-white"><i class="fas fa-chart-bar mr-2"></i>Statistics</h4>
-            <ul class="list-group">
-                <li class="border-0 mt-1 list-group-item">Waiting:5</li>
-                <li class="border-0 mt-1 list-group-item">5 Star Finished:5</li>
-                <li class="border-0 mt-1 list-group-item">4 Star Finished:15</li>
-                <li class="border-0 mt-1 list-group-item">3 Star Finished:25</li>
-                <li class="border-0 mt-1 list-group-item">Total Task:52</li>
-
-            </ul>
-        </div>
+        
        
     </div>
 </div>
 </section>
-<section id="wheather">
-    <div class="container-fluid">
-        <div class="row text-center text-white">
-            <div class="col-12">Wheather API</div>
-        </div>
-    </div>
-</section>
+
 </main>
 <!--Footer Section-->
 <footer>
 
 </footer>
-<script src="main.js"></script>
-
+<script src="toodoo.js"></script>
+<script src="cdt.js"></script>
 <script>
     $(function(){
-        console.log("running");
+        
     });
 </script>
 </body>
